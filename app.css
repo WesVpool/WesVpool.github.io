@@ -1,0 +1,47 @@
+.chalkboard {
+    color:black;
+    font-family:cursive ;
+    display: block;
+    position: relative;
+    min-height: auto;
+    background-color: green;
+    margin: 30px auto 0 auto;
+    padding: 20px 30px;
+    overflow-y: auto;
+    box-shadow: -1px 2px 2px 0px #555, inset 0 0 10px 0 #555;
+    border: #864b03 solid 10px;
+    border-radius: 10px;
+ }
+
+ .vintageTMNT {
+    width: 200px;
+    height: 200px;
+    background-image: url(https://www.giantfreakinrobot.com/wp-content/uploads/2022/03/teenage-mutant-ninja-turtles-classic-900x506.jpg);
+    background-size: cover;
+    position: relative;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: rotationTMNT 10s infinite linear;
+    -webkit-animation: rotationTMNT 10s infinite linear;
+  }
+ 
+@-webkit-keyframes rotationTMNT {
+    from {
+        background-position: left center;
+    }
+    to {
+        background-position: -356px center;
+    }
+}
+
+@keyframes rotationTMNT {
+    from {
+        background-position: left center;
+    }
+    to {
+        background-position: -356px center;
+    }
+}
