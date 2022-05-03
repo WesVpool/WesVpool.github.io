@@ -1,3 +1,15 @@
+h1 {
+    font-size: 3em;
+    color: green
+}
+.redItems{
+    font-size: 2em;
+    color: red
+}
+.blueItems{
+    font-size: 2em;
+    color: blue
+}
 .chalkboard {
     color:white;
     font-family:cursive ;
