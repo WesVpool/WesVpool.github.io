@@ -1,3 +1,15 @@
+body {
+    background-color: #5a5a5a;
+    padding-top: 0rem;
+    padding-bottom: 3rem;
+    color: #ffffff;
+  }
+.dropdown-menu {
+    background-color: #5a5a5a;
+}
+.dropdown-item {
+    color: white;
+}
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -6,6 +18,17 @@
     text-align: center;
     padding-top: 50px;
 }
+.p1 {
+    color:white
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+.hyper {
+    color: green;
+    text-decoration: none;
+}
+
+a.hyper:hover {color: greenyellow;}
 
 .vintageTMNT {
     color: white;
@@ -91,16 +114,7 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 
-body {
-    background-color: #5a5a5a;
-    padding-top: 0rem;
-    padding-bottom: 3rem;
-    color: #ffffff;
-  }
   
   
   /* CUSTOMIZE THE CAROUSEL
@@ -122,11 +136,6 @@ body {
     background-color: grey;
   }
   
-  
-  /* MARKETING CONTENT
-  -------------------------------------------------- */
-  
-  /* Center align the text within the three columns below the carousel */
   .marketing .col-lg-4 {
     margin-bottom: 1.5rem;
     text-align: center;
@@ -185,4 +194,9 @@ body {
 .thumb {
     width: 200px;
     height: 200px;
+}
+
+footer {
+    padding-top: 100px;
+    text-align: center;
 }
