@@ -1,198 +1,314 @@
 body {
-    background-color: #5a5a5a;
-    padding-top: 0rem;
-    padding-bottom: 3rem;
-    color: #ffffff;
-  }
-.dropdown-menu {
-    background-color: #5a5a5a;
+  background-color: #5a5a5a;
+  padding-top: 0rem;
+  padding-bottom: 3rem;
+  color: #ffffff;
 }
-.dropdown-item {
-    color: white;
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-}
-.blockie {
-    grid-column: 3;
-    text-align: center;
-    padding-top: 50px;
-    margin: auto;
-}
-.p1 {
-    color:white;
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-}
-.hyper {
-    color: green;
-    text-decoration: none;
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 99
 }
 
-a.hyper:hover {color: greenyellow;}
+main {
+margin-top: 3rem;
+}
+
+.row {
+margin-left: 16px;
+margin-right: 16px;
+}
+
+.dropdown-menu {
+  background-color: #5a5a5a;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.blockie {
+grid-column: 3;
+text-align: center;
+padding-top: 50px;
+}
+
+.p1 {
+  color:white;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.hyper {
+color: rgb(0, 255, 0);
+text-decoration: none;
+transition: 1s ease color;
+}
+
+a.hyper:hover {
+cursor: pointer;
+color: rgb(0, 183, 255);
+transition: 1s ease color;
+}
 
 /* TMNT Animation
-  -------------------------------------------------- */
+-------------------------------------------------- */
+.TMNTanimation{
+  grid-column: 2;
+  text-align: center;
+  padding-top: 50px;
+  /* margin: auto; */
+}
+
 .vintageTMNT {
-    grid-column: 2;
-    color: white;
-    width: 200px;
-    height: 200px;
-    background-image: url(https://www.giantfreakinrobot.com/wp-content/uploads/2022/03/teenage-mutant-ninja-turtles-classic-900x506.jpg);
-    background-size: cover;
-    position: relative;
-    top: 50px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    animation: rotationTMNT 10s infinite linear;
-  }
- 
+  color: white;
+  width: 200px;
+  height: 200px;
+  background-image: url(https://www.giantfreakinrobot.com/wp-content/uploads/2022/03/teenage-mutant-ninja-turtles-classic-900x506.jpg);
+  background-size: 409px 282px;
+  background-position-y: -58px;
+  /* position: relative; */
+  /* top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  margin: auto;
+  animation: rotationTMNT 10s infinite linear;
+}
+
 @keyframes rotationTMNT {
-    from {
-        background-position: left center;
-    }
-    to {
-        background-position: -356px center;
-    }
+  from {
+      background-position-x: left;
+  }
+  to {
+      background-position-x: -409px;
+  }
 }
 /*-------------------------------------------------- */
 
 .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  /* transform: translateX(10px); */
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 20rem;
+  background-color: grey;
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+/* rtl:end:remove */
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
   }
 
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-
-  .b-example-divider {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-  }
-
-  .b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-  }
-
-  .bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-  }
-
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
-
-  .nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  
-  
-  /* CUSTOMIZE THE CAROUSEL
-  -------------------------------------------------- */
-  
-  /* Carousel base class */
-  .carousel {
-    margin-bottom: 4rem;
-  }
-  /* Since positioning the image, we need to help out the caption */
-  .carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-  }
-  
-  /* Declare heights because of positioning of img element */
-  .carousel-item {
-    height: 20rem;
-    background-color: grey;
-  }
-  
-  .marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  /* rtl:begin:ignore */
-  .marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-  }
-  /* rtl:end:ignore */
-  
-  
-  /* Featurettes
-  ------------------------- */
-  
-  .featurette-divider {
-    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-  }
-  
-  /* Thin out the marketing headings */
-  /* rtl:begin:remove */
   .featurette-heading {
-    letter-spacing: -.05rem;
+    font-size: 50px;
   }
-  
-  /* rtl:end:remove */
-  
-  /* RESPONSIVE CSS
-  -------------------------------------------------- */
-  
-  @media (min-width: 40em) {
-    /* Bump up size of carousel content */
-    .carousel-caption p {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.4;
-    }
-  
-    .featurette-heading {
-      font-size: 50px;
-    }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 2rem;
   }
-  
-  @media (min-width: 62em) {
-    .featurette-heading {
-      margin-top: 2rem;
-    }
-  }
+}
 
 .projects {
-    text-align: center;
-    font-size: 10em;
-    padding-bottom: 100px;
+  text-align: center;
+  font-size: 10em;
+  padding-bottom: 100px;
+}
+
+.stack {
+text-align: center;
+font-size: 6em;
+padding-bottom: 50px;
+padding-top: 40px;
+}
+
+.bBank{
+grid-column: 2;
+text-align: center;
+margin: auto;
+}
+
+#slideshow{
+grid-column: 3;
+text-align: center;
+width: 710px;
+margin: auto;
 }
 
 .thumb {
-    width: 200px;
-    height: 200px;
+  padding-bottom: 20px;
+  width: 200px;
+  height: 200px;
 }
 
 footer {
-    padding-top: 100px;
-    text-align: center;
+  padding-top: 100px;
+  text-align: center;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+.picMe {
+  padding-bottom: 2rem;
+}
+
+.featurette-heading {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+
+/* Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {
+main {
+  margin-top: 3.5rem;
+}
+
+.carousel-item.active {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-item {
+  display: ;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-caption {
+  /* bottom: 0; */
+  /* position: absolute; */
+  /* height: 263px; */
+  /* width: 260px; */
+  /* display: flex; */
+  /* z-index: 10; */
+  /* flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+} */
