@@ -12,14 +12,16 @@ body {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(4, auto);
 }
 .blockie {
+    grid-column: 3;
     text-align: center;
     padding-top: 50px;
+    margin: auto;
 }
 .p1 {
-    color:white
+    color:white;
     font-family: Arial, sans-serif;
     font-size: 20px;
 }
@@ -30,7 +32,10 @@ body {
 
 a.hyper:hover {color: greenyellow;}
 
+/* TMNT Animation
+  -------------------------------------------------- */
 .vintageTMNT {
+    grid-column: 2;
     color: white;
     width: 200px;
     height: 200px;
@@ -43,18 +48,8 @@ a.hyper:hover {color: greenyellow;}
     bottom: 0;
     margin: auto;
     animation: rotationTMNT 10s infinite linear;
-    -webkit-animation: rotationTMNT 10s infinite linear;
   }
  
-@-webkit-keyframes rotationTMNT {
-    from {
-        background-position: left center;
-    }
-    to {
-        background-position: -356px center;
-    }
-}
-
 @keyframes rotationTMNT {
     from {
         background-position: left center;
@@ -63,6 +58,7 @@ a.hyper:hover {color: greenyellow;}
         background-position: -356px center;
     }
 }
+/*-------------------------------------------------- */
 
 .bd-placeholder-img {
     font-size: 1.125rem;
